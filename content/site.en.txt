@@ -3,3 +3,23 @@ Title: Ralston & Bau
 ----
 
 Text: 
+
+----
+
+Author: 
+
+----
+
+Description: 
+
+----
+
+Keywords: 
+
+----
+
+Maintenance: 1
+
+----
+
+Ogimage: 

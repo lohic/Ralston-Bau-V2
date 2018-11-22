@@ -42,4 +42,10 @@ c::set('languages', [
     'locale'  => 'fr_FR',
     'url'     => '/fr',
   ],
+  [
+    'code'    => 'no',
+    'name'    => 'Norsk',
+    'locale'  => 'no_NO',
+    'url'     => '/no',
+  ],
 ]);
