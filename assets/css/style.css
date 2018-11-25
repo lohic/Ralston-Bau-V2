@@ -156,25 +156,25 @@ body{
 
 
 #info h1{
-	font-size: 3.1875rem;
+	font-size: 3.1875rem;5
 	margin-bottom: 20px;
 }
 
 #info>div{
-	min-width: 335px;
+	/*min-width: 335px;*/
 	margin-bottom: 30px;
 }
 
 #info>div h2{
 	font-size: 1.625rem;
 	font-family: "Colaborate";
-	font-weight: 400;
+	font-weight: 300;
 }
 
 #info>div p{
 	font-size: 1.25rem;
 	font-family: "Colaborate";
-	font-weight: 400;
+	font-weight: 300;
 }
 
 
@@ -237,6 +237,13 @@ body{
 	display: block;
 }
 
+@media screen and (max-width: 1000px ){
+
+	html{
+		font-size: 14px;
+	}
+
+}
 @media screen and (max-width: 500px ){
 
 	body{
