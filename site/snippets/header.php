@@ -4,10 +4,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title ><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
+	<link rel="icon" type="image/png" href="favicon.png" />
 
 	<link rel="stylesheet" href="https://use.typekit.net/vrl2tmu.css">
 
-
+	<?= css("assets/fonts/Colaborate/stylesheet.css") ?>
 	<?= css("assets/css/style.css") ?>
 	<?= js("assets/js/jquery-3.2.1.min.js") ?>
 </head>

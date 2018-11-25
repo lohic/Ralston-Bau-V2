@@ -7,7 +7,7 @@
 <?php if( ! $site->maintenance()->isTrue() ) { go('home');} ?>
 
 <div id="title" class="drawer">
-	<h1><img src="assets/images/logo.svg" alt="Ralston Bau"></h1>
+	<h1><img id="logo" src="assets/images/logo.svg" alt="Ralston Bau"></h1>
 </div>
 
 <div id="content" class="drawer">
@@ -47,22 +47,22 @@
 		</div>
 	</div>
 	<div id="main" class="drawer loading">
+	
+		<p id="cases" class="togglebloc hideonopen">Cases and practice will soon be shown here.</p>
 		
-		<div class="togglebloc hideonclose">
+		<div id="intro" class="togglebloc hideonclose">
 			<p class="lang en">Independent design studio decoding the complexity of our world, connecting people and our common spaces through transformative practice. Ralston & Bau transform ideas into action – and complex questions into the objects you need.</p>
 
 			<p class="lang no">Uavhengig designstudio som dekoder den komplekse verda rundt oss. Gjennom transformativ praksis koblar vi mennesker med dei felles romma som omgir oss. Ralston & Bau gjer idear om til handling – og komplekse spørsmål om til objekt ein har behov for.</p>
 
 			<p class="lang fr">Studio de design indépendant, s’attachant à décoder la complexité de notre monde, il met en connexion personnes et espaces partagés. Pratiquant le design transformatif, Ralston & Bau passe des idées à l’action et des questions complexes en objet essentiel.</p>
 		</div>
-	
-		<p class="togglebloc hideonopen">Cases and practice will soon be shown here.</p>
 
 
 		<div id="contact">
 			<a href="https://www.facebook.com/ralstonbau" target="_blank"><img src="assets/images/facebook.svg" alt="facebook"></a>
 			<a href="https://www.instagram.com/studioralstonbau" target="_blank"><img src="assets/images/instagram.svg" alt="instagram"></a>
-			<!-- <a href="mailto:" target="_blank"><img src="assets/images/mail.svg" alt="mail"></a> -->
+			<a href="mailto:studio@ralstonbau.com"><img src="assets/images/mail.svg" alt="mail"></a>
 		</div>
 	</div>
 
@@ -82,17 +82,8 @@
 			$("#main").toggleClass("loading");
 		})
 
-		lang_interval = setInterval(lang_switcher,3000);
-		lang_switcher()
+
 	})
-
-	function lang_switcher(){
-		console.log("lang "+lang_id );
-
-		$(".lang").hide()
-		$("."+lang_arr[lang_id]).show();
-		lang_id = (lang_id + 1) % lang_arr.length;
-	}
 
 </script>
 
