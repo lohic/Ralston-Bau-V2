@@ -11,7 +11,7 @@
 </div>
 
 <div id="content" class="drawer">
-	<div id="info" class="drawer loading">
+	<div id="info" class="drawer">
 			
 		<h1>Now</h1>
 
@@ -46,16 +46,12 @@
 			<p>Salone del Mobile<br>9-14 April 2019, Milano, Italy</p>
 		</div>
 	</div>
-	<div id="main" class="drawer loading">
+	<div id="main" class="drawer">
 	
 		<p id="cases" class="togglebloc hideonopen">Cases and practice will soon be shown here.</p>
 		
 		<div id="intro" class="togglebloc hideonclose">
-			<p class="lang en">Independent design studio decoding the complexity of our world, connecting people and our common spaces through transformative practice. Ralston & Bau transform ideas into action – and complex questions into the objects you need.</p>
-
-			<p class="lang no">Uavhengig designstudio som dekoder den komplekse verda rundt oss. Gjennom transformativ praksis koblar vi mennesker med dei felles romma som omgir oss. Ralston & Bau gjer idear om til handling – og komplekse spørsmål om til objekt ein har behov for.</p>
-
-			<p class="lang fr">Studio de design indépendant, s’attachant à décoder la complexité de notre monde, il met en connexion personnes et espaces partagés. Pratiquant le design transformatif, Ralston & Bau passe des idées à l’action et des questions complexes en objet essentiel.</p>
+			<p class="lang">Independent design studio decoding the complexity of our world, connecting people and our common spaces through transformative practice. Ralston & Bau transform ideas into action – and complex questions into the objects you need.</p>
 		</div>
 
 
@@ -73,40 +69,58 @@
 
 	var lang_arr = ["en", "no", "fr"];
 	var lang_id  = 0;
-	
+
+	var intro = {
+		"fr" : "Studio de design indépendant, s’attachant à décoder la complexité de notre monde, il met en connexion personnes et espaces partagés. Pratiquant le design transformatif, Ralston & Bau passe des idées à l’action et des questions complexes en objet essentiel",
+		"en" : "Independent design studio decoding the complexity of our world, connecting people and our common spaces through transformative practice. Ralston & Bau transform ideas into action – and complex questions into the objects you need.",
+		"no" : "Uavhengig designstudio som dekoder den komplekse verda rundt oss. Gjennom transformativ praksis koblar vi mennesker med dei felles romma som omgir oss. Ralston & Bau gjer idear om til handling – og komplekse spørsmål om til objekt ein har behov for."
+	};	
+
 	$(document).ready(function(){
 		console.log("RALSTON BAU ok");
+
+		$('.lang').text( intro.en );
+
+		setTimeout(function(){ 
+			$("#info").toggleClass("loading");
+			$("#main").toggleClass("loading");
+		}, 1000);
+
+		
 
 		$("#info").click(function(e){
 			$("#info").toggleClass("loading");
 			$("#main").toggleClass("loading");
 		})
 
+		var lang_bloc = document.querySelector("p.lang");
 
+		console.log(lang_bloc);
+
+		lang_bloc.addEventListener("animationstart", listener, false);
+		lang_bloc.addEventListener("animationend", listener, false);
+		lang_bloc.addEventListener("animationiteration", listener, false);
+
+
+		function listener(event) {
+			console.log("ok listener");
+
+			switch(event.type) {
+				case "animationstart":
+					console.log("animationstart");
+				break;
+				case "animationend":
+					console.log("animationend");
+				break;
+				case "animationiteration":
+					lang_id  = (lang_id + 1)%lang_arr.length;
+
+					console.log("animationiteration");
+					$('.lang').text( intro[ lang_arr[lang_id] ] );
+				break;
+			}
+		}
 	})
-
-	// var element = document.getElementById("watchme");
-	// element.addEventListener("animationstart", listener, false);
-	// element.addEventListener("animationend", listener, false);
-	// element.addEventListener("animationiteration", listener, false);
-
-	// element.className = "slidein";
-	// function listener(event) {
-	// 	var l = document.createElement("li");
-	// 	switch(event.type) {
-	// 		case "animationstart":
-	// 		l.innerHTML = "Début : durée écoulée : " + event.elapsedTime;
-	// 		break;
-	// 		case "animationend":
-	// 		l.innerHTML = "Fin : durée écoulée : " + event.elapsedTime;
-	// 		break;
-	// 		case "animationiteration":
-	// 		l.innerHTML = "Nouvelle boucle démarrée à : " + event.elapsedTime;
-	// 		break;
-	// 	}
-	// 	document.getElementById("output").appendChild(l);
-	// }
-
 
 
 </script>
