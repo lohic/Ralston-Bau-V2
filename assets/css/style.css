@@ -52,7 +52,8 @@ table {
 
 
 html{
-	font-size: 16px;
+	/*font-size: 16px;*/
+	font-size: 1.5vmin;
 }
 
 html, body{
@@ -69,6 +70,16 @@ body{
 *{
 	box-sizing: border-box;
 }
+
+button{
+	background: none;
+	border:0;
+	padding: 0;
+	font-family: big-caslon-fb, serif;
+	font-size: 0.875rem;
+	cursor: pointer;
+}
+
 
 .drawer{
 	height: 100vh;
@@ -88,6 +99,11 @@ body{
 #logo{
 	width: 130px;
 	height: auto;
+}
+
+#btn-stories{
+	position: absolute;
+	bottom: 47px;
 }
 
 #content{
@@ -226,6 +242,82 @@ body{
 	transform-origin: center;
 	display: block;
 }
+
+
+
+#stories{
+	position: fixed;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #000;
+	transform-origin: center center;
+	/*visibility: hidden;*/
+    animation-name: stories-close-animation;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+#stories.open{
+	visibility: visible;
+	transform: scale(0.7) ;
+    animation-name: stories-open-animation;
+}
+
+@keyframes stories-open-animation {
+    0% {
+    	opacity:0;
+    	transform: scale(0.7) ;
+    }
+    100% {
+		opacity:1;
+		transform: scale(1);
+    }
+}
+
+@keyframes stories-close-animation {
+    0% {
+		opacity:1;
+		transform: scale(1);
+    }
+    100% {
+    	opacity:0;
+    	transform: scale(0.7) ;
+    	visibility: hidden;
+    }
+}
+
+
+
+
+
+#stories input{
+	border: #FFF solid 1px;
+	color: #FFF;
+	background: #000;
+	font-size: 2rem;
+	padding: 0.5rem;
+	font-family: big-caslon-fb, serif;
+	letter-spacing: 0.15rem;
+}
+
+#btn-send{
+	color: #FFF;
+	font-size: 2rem;
+	padding: 0.5rem;
+}
+
+#btn-close{
+	position: absolute;
+	top: 43px;
+	right: 43px;
+	color: #FFF;
+}
+
 
 @media screen and (max-width: 1000px ){
 

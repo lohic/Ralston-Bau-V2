@@ -8,6 +8,8 @@
 
 <div id="title" class="drawer">
 	<h1><img id="logo" src="assets/images/logo.svg" alt="Ralston Bau"></h1>
+
+	<button id="btn-stories"><?= l::get('getstories') ?></button>
 </div>
 
 <div id="content" class="drawer">
@@ -15,43 +17,22 @@
 			
 		<h1>Now</h1>
 
-		<div>
-			<h2>Associated artists 2017-2020</h2>
-			<h2>Territoire Ideal</h2>
-			<p>MAGASIN des Horizons<br>Grenoble, France</p>
-		</div>
+
+		<?php foreach($site->children()->findBy('uid','news')->children()->visible()->sortBy('date', 'asc') as $article): ?>
 
 		<div>
-			<h2>Idealist design</h2>
-			<p>ESAAA<br>24 January 2019 - Annecy, France</p>
+			<h2><?= $article->title()->html() ?></h2>
+			<p><?= $article->place()->text() ?><br><?= $article->datefromto()->text() ?></p>
 		</div>
-
-		<div>
-			<h2>Why not?</h2>
-			<p>Central Saint Martins<br>7-12 January 2019, London, UK</p>
-		</div>
-
-		<div>
-			<h2>Ideal village</h2>
-			<p>UiB, KMD, Institute of Design<br>12-22 February 2019, Bergen, Norway</p>
-		</div>
-
-		<div>
-			<h2>Design in Design Thinking</h2>
-			<p>Executive Master DT Bergen<br>10 April 2019, Bergen, Norway</p>
-		</div>
-
-		<div>
-			<h2>New product launch</h2>
-			<p>Salone del Mobile<br>9-14 April 2019, Milano, Italy</p>
-		</div>
+	
+		<?php endforeach; ?>
 	</div>
 	<div id="main" class="drawer">
 	
 		<p id="cases" class="togglebloc hideonopen">Cases and practice will soon be shown here.</p>
 		
 		<div id="intro" class="togglebloc hideonclose">
-			<p class="lang">Independent design studio decoding the complexity of our world, connecting people and our common spaces through transformative practice. Ralston & Bau transform ideas into action – and complex questions into the objects you need.</p>
+			<p class="lang"><?= $site->children()->findBy('uid','home')->text()->text() ?></p>
 		</div>
 
 
@@ -71,9 +52,9 @@
 	var lang_id  = 0;
 
 	var intro = {
-		"fr" : "Studio de design indépendant, s’attachant à décoder la complexité de notre monde, il met en connexion personnes et espaces partagés. Pratiquant le design transformatif, Ralston & Bau passe des idées à l’action et des questions complexes en objet essentiel",
-		"en" : "Independent design studio decoding the complexity of our world, connecting people and our common spaces through transformative practice. Ralston & Bau transform ideas into action – and complex questions into the objects you need.",
-		"no" : "Uavhengig designstudio som dekoder den komplekse verda rundt oss. Gjennom transformativ praksis koblar vi mennesker med dei felles romma som omgir oss. Ralston & Bau gjer idear om til handling – og komplekse spørsmål om til objekt ein har behov for."
+		"fr" : "<?= $site->children()->findBy('uid','home')->content('fr')->text()->text() ?>",
+		"en" : "<?= $site->children()->findBy('uid','home')->content('en')->text()->text() ?>",
+		"no" : "<?= $site->children()->findBy('uid','home')->content('no')->text()->text() ?>"
 	};	
 
 	$(document).ready(function(){
@@ -84,7 +65,7 @@
 		setTimeout(function(){ 
 			$("#info").toggleClass("loading");
 			$("#main").toggleClass("loading");
-		}, 1000);
+		}, 2000);
 
 		
 
@@ -120,6 +101,22 @@
 				break;
 			}
 		}
+
+		// $("#stories").hide();
+		// 
+		$("#stories").css("visibility", "hidden");
+
+		$("#btn-stories").click(function(event){
+			$("#stories")
+				.css("visibility", "")
+				.addClass('open');//.show();
+		})
+
+		$("#btn-close").click(function(event){
+			$("#stories")
+				.removeClass('open');//.hide();
+		})
+
 	})
 
 

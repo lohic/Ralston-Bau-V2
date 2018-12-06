@@ -5,3 +5,15 @@
 
 <!--fin default.php -->
 <?php snippet('footer') ?>
+
+<!-- Practice
+Praksis
+Procedé
+
+Cases
+Prosjekt
+Projet
+
+Studio
+Studio
+Studio -->
