@@ -34,3 +34,5 @@ Icon
 .phpintel/*
 .phpintel/*/
 .phpintel/index
+
+.DS_Store
