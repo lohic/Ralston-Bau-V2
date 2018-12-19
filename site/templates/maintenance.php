@@ -9,7 +9,7 @@
 <div id="title" class="drawer">
 	<h1><img id="logo" src="assets/images/logo.svg" alt="Ralston Bau"></h1>
 
-	<button id="btn-stories"><?= l::get('getstories') ?></button>
+	<button id="btn-newsletter"><?= l::get('newsletter') ?></button>
 </div>
 
 <div id="content" class="drawer">
@@ -27,6 +27,8 @@
 	
 		<?php endforeach; ?>
 	</div>
+
+
 	<div id="main" class="drawer">
 	
 		<p id="cases" class="togglebloc hideonopen">Cases and practice will soon be shown here.</p>
@@ -37,9 +39,9 @@
 
 
 		<div id="contact">
-			<a href="https://www.facebook.com/ralstonbau" target="_blank"><img src="assets/images/facebook.svg" alt="facebook"></a>
-			<a href="https://www.instagram.com/studioralstonbau" target="_blank"><img src="assets/images/instagram.svg" alt="instagram"></a>
-			<a href="mailto:studio@ralstonbau.com"><img src="assets/images/mail.svg" alt="mail"></a>
+			<a href="https://www.facebook.com/ralstonbau" target="_blank"><img class="btn-facebook" src="assets/images/facebook.svg" alt="facebook"></a>
+			<a href="https://www.instagram.com/studioralstonbau" target="_blank"><img class="btn-instagram" src="assets/images/instagram.svg" alt="instagram"></a>
+			<a href="mailto:studio@ralstonbau.com"><img class="btn-mail" src="assets/images/mail.svg" alt="mail"></a>
 		</div>
 	</div>
 
@@ -60,6 +62,9 @@
 	$(document).ready(function(){
 		console.log("RALSTON BAU ok");
 
+
+
+		//  MAINTENANCE DRAWERS
 		$('.lang').text( intro.en );
 
 		setTimeout(function(){ 
@@ -67,7 +72,6 @@
 			$("#main").toggleClass("loading");
 		}, 2000);
 
-		
 
 		$("#info").click(function(e){
 			$("#info").toggleClass("loading");
@@ -102,11 +106,13 @@
 			}
 		}
 
-		// $("#stories").hide();
-		// 
+
+
+
+		// STORIES PANEL
 		$("#stories").css("visibility", "hidden");
 
-		$("#btn-stories").click(function(event){
+		$("#btn-newsletter").click(function(event){
 			$("#stories")
 				.css("visibility", "")
 				.addClass('open');//.show();

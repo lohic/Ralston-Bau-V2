@@ -101,7 +101,7 @@ button{
 	height: auto;
 }
 
-#btn-stories{
+#btn-newsletter{
 	position: absolute;
 	bottom: 47px;
 }
@@ -128,7 +128,7 @@ button{
 }
 
 #info, #main{
-	transition: width 2s ease;
+	transition: width 2s ease, top 2s ease;
 }
 
 #info{
@@ -141,7 +141,7 @@ button{
 }
 
 #info.loading{
-	width: 72px;
+	/*width: 72px;*/
 }
 
 #info.loading * {
@@ -179,8 +179,8 @@ button{
 
 
 #info h1{
-	font-size: 3.1875rem;5
-	margin-bottom: 20px;
+	font-size: 3.1875rem;
+	margin-bottom: 2.1875rem;
 }
 
 #info>div{
@@ -355,13 +355,17 @@ button{
 	}
 
 	#info{
-		display: none;
 		left: auto;
 		right: auto;
+		width: auto;
+		padding: 33px 26px;
+		transition: max-height 2s;
+		max-height: 100vh;
 	}
 
 	#info.loading{
 		width: auto;
+		max-height: 60px;
 	}
 
 
@@ -370,39 +374,21 @@ button{
 		height: auto;
 		left: auto;
 		right: auto;
-		padding: 0;
+		padding:60px 15px;
 		position: relative;
 	}
 
 	#main #cases{
-		background: #F2E0CD;
-		padding: 17px;
-		color: #000;
 	}
 
 	#main #intro{
-		background: #000;
-		padding: 17px;
 	}
 
 	#main.loading{
 		width: auto;
 	}
 
-	.drawer.loading .togglebloc.hideonclose{
-		display: block;
-	}
-	.drawer.loading .togglebloc.hideonopen{
-		display: block;
-	}
 
-
-	.drawer .togglebloc.hideonclose{
-		display: block;
-	}
-	.drawer .togglebloc.hideonopen{
-		display: block;
-	}
 
 	.togglebloc .lang{
 		margin-bottom: 100px;
@@ -415,6 +401,22 @@ button{
 		position: fixed;
 		right: 17px;
 		bottom: 17px;
+	}
+
+	#btn-newsletter{
+		position: absolute;
+		bottom: 47px;
+		display: none;
+	}
+
+	#main #contact img{
+		width: 20px;
+		height: auto;
+	}
+
+	#main #contact .btn-mail{
+		position: relative;
+		top: -1px;
 	}
 
 }
