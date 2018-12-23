@@ -245,7 +245,7 @@ button{
 
 
 
-#stories{
+#newsletter{
 	position: fixed;
 	top:0;
 	bottom: 0;
@@ -257,18 +257,18 @@ button{
 	background: #000;
 	transform-origin: center center;
 	/*visibility: hidden;*/
-    animation-name: stories-close-animation;
+    animation-name: newsletter-close-animation;
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
 }
 
-#stories.open{
+#newsletter.open{
 	visibility: visible;
 	transform: scale(0.7) ;
-    animation-name: stories-open-animation;
+    animation-name: newsletter-open-animation;
 }
 
-@keyframes stories-open-animation {
+@keyframes newsletter-open-animation {
     0% {
     	opacity:0;
     	transform: scale(0.7) ;
@@ -279,7 +279,7 @@ button{
     }
 }
 
-@keyframes stories-close-animation {
+@keyframes newsletter-close-animation {
     0% {
 		opacity:1;
 		transform: scale(1);
@@ -295,7 +295,7 @@ button{
 
 
 
-#stories input{
+#newsletter input{
 	border: #FFF solid 1px;
 	color: #FFF;
 	background: #000;
@@ -303,6 +303,15 @@ button{
 	padding: 0.5rem;
 	font-family: big-caslon-fb, serif;
 	letter-spacing: 0.15rem;
+}
+
+#newsletter p+p{
+	margin-top: 1rem;
+}
+
+#newsletter a{
+	color: #FFF;
+	text-decoration: none;
 }
 
 #btn-send{
@@ -316,6 +325,29 @@ button{
 	top: 43px;
 	right: 43px;
 	color: #FFF;
+}
+
+
+
+.languages li{
+	display: inline-block;
+	font-family: "Colaborate";
+	padding: 0;
+	margin: 0;
+}
+
+.languages li+li:before{
+	content: "\\";
+}
+
+.languages li a{
+	text-decoration: none;
+	color: #000;
+	text-transform: capitalize;
+}
+
+.languages li.active a{
+	text-decoration: underline;
 }
 
 

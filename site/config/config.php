@@ -36,16 +36,19 @@ c::set('languages', [
     'default' => true,
     'locale'  => 'en_EN',
     'url'     => '/',
-  ], [
-    'code'    => 'fr',
-    'name'    => 'French',
-    'locale'  => 'fr_FR',
-    'url'     => '/fr',
   ],
   [
     'code'    => 'no',
     'name'    => 'Norsk',
     'locale'  => 'no_NO',
     'url'     => '/no',
+  ], [
+    'code'    => 'fr',
+    'name'    => 'French',
+    'locale'  => 'fr_FR',
+    'url'     => '/fr',
   ],
 ]);
+
+
+c::set('autopublish.templates', array('step'));

@@ -9,7 +9,7 @@
 <div id="title" class="drawer">
 	<h1><img id="logo" src="assets/images/logo.svg" alt="Ralston Bau"></h1>
 
-	<button id="btn-newsletter"><?= l::get('newsletter') ?></button>
+	<button id="btn-newsletter"><?= l::get('newsletter') ?></button>        
 </div>
 
 <div id="content" class="drawer">
@@ -110,16 +110,16 @@
 
 
 		// STORIES PANEL
-		$("#stories").css("visibility", "hidden");
+		$("#newsletter").css("visibility", "hidden");
 
 		$("#btn-newsletter").click(function(event){
-			$("#stories")
+			$("#newsletter")
 				.css("visibility", "")
 				.addClass('open');//.show();
 		})
 
-		$("#btn-close").click(function(event){
-			$("#stories")
+		$("#newsletter").click(function(event){
+			$("#newsletter")
 				.removeClass('open');//.hide();
 		})
 

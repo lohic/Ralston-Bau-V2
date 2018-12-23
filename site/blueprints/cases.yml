@@ -1,0 +1,15 @@
+title: Cases
+# icon: sticky-note
+files: false
+options:
+  preview: true
+  status: true
+  template: false
+  url: true
+  delete: false
+pages: 
+  template: case
+fields:
+  title:
+    label: Title
+    type:  text

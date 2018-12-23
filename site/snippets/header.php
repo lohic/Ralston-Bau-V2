@@ -18,5 +18,5 @@
 <?php if($site->maintenance()->isTrue() and $page->uid() != 'maintenance') { go('maintenance');} ?>
 
 <?php if($page->uid() != 'maintenance') { ?>
-<?php // snippet('menu') ?>
+<?php 	snippet('menu') ?>
 <?php } ?>

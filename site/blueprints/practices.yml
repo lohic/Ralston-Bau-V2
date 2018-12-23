@@ -1,0 +1,15 @@
+title: Practices
+# icon: sticky-note
+files: false
+options:
+  preview: true
+  status: false
+  template: false
+  url: true
+  delete: false
+pages:
+  template: practice
+fields:
+  title:
+    label: Title
+    type:  text

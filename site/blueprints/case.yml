@@ -1,0 +1,38 @@
+title: Case
+# icon: sticky-note
+files: true
+options:
+  preview: true
+  status: true
+  template: false
+  url: true
+  delete: true
+pages:
+  hide: true
+  template: step
+fields:
+  title:
+    label: Title
+    type:  text
+  date:
+    label: date
+    type: date
+  text:
+    label: Text
+    type:  textarea
+  # practices:
+  #   label: Practices in relation
+  #   type: relationship
+  #   options: query
+  #   search: true
+  #   query:
+  #     page: practice
+  #     fetch: children
+  step:
+    label: Step (will be visible in practice category)
+    type: index
+    options: children
+    rows: 25
+    order: desc
+    columns:
+      title: Step
