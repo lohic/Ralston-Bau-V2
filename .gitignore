@@ -36,3 +36,5 @@ Icon
 .phpintel/index
 
 .DS_Store
+
+node_modules
