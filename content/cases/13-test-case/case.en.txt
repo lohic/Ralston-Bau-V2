@@ -1,0 +1,17 @@
+Title: Wilde Werf Park
+
+----
+
+Text: In Amsterdam Noord in rapid development, we investigated transformable planning through the “ombestemmingsplan”  that requestion the current zoning plan. The result was a scenario expressed with an in-situ installation.
+
+----
+
+Practices: test-practice, test-practice-2
+
+----
+
+Test: yo
+
+----
+
+Date: 2018-03-31

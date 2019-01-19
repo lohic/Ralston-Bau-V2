@@ -1,0 +1,17 @@
+Title: Big picture
+
+----
+
+Image: 05-1.jpg
+
+----
+
+Text: this is the big picture texte of The Other Side.....
+
+----
+
+Relatedpractice: 
+
+----
+
+Test: yo

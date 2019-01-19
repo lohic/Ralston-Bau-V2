@@ -1,0 +1,9 @@
+Title: Scenario
+
+----
+
+Text: Sirkulære narrativ gjer meining til komplekse idear. Problemstilling og interessent skildras i ei tidsrytme med løysingar i form av tenester og produkt.
+
+----
+
+Test: yo

@@ -1,0 +1,25 @@
+Title: step 1
+
+----
+
+Text: 
+
+----
+
+Test: yo
+
+----
+
+Tags: 
+
+----
+
+Artistes: test-practice
+
+----
+
+Image: 
+
+----
+
+Relatedpractice: 
