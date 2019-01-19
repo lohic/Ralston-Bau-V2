@@ -39,6 +39,8 @@
 
 
 		<div id="contact">
+			<a href="http://www.ideal-lab.org" target="_blank"><img class="btn-ideallab" src="assets/images/ideal_lab_logo-white.svg" alt="ideal lab"></a>
+			<a href="http://www.idealist.institute" target="_blank"><img class="btn-idealistinstitute" src="assets/images/idealist-institute-logo-white.svg" alt="idealist institute"></a>
 			<a href="https://www.facebook.com/ralstonbau" target="_blank"><img class="btn-facebook" src="assets/images/facebook.svg" alt="facebook"></a>
 			<a href="https://www.instagram.com/studioralstonbau" target="_blank"><img class="btn-instagram" src="assets/images/instagram.svg" alt="instagram"></a>
 			<a href="mailto:studio@ralstonbau.com"><img class="btn-mail" src="assets/images/mail.svg" alt="mail"></a>
@@ -113,6 +115,10 @@
 		$("#newsletter").css("visibility", "hidden");
 
 		$("#btn-newsletter").click(function(event){
+
+			event.preventDefault();
+			event.stopPropagation();
+
 			$("#newsletter")
 				.css("visibility", "")
 				.addClass('open');//.show();
@@ -122,6 +128,12 @@
 			$("#newsletter")
 				.removeClass('open');//.hide();
 		})
+
+		$("#newsletter input").click(function(event){
+			event.preventDefault();
+			event.stopPropagation();
+		});
+
 
 	})
 
