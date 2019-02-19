@@ -207,12 +207,6 @@ button{
 	right: 60px;
 }
 
-#contact .btn-ideallab,
-#contact .btn-idealistinstitute{
-	display: inline-block;
-	margin-right: 30px;
-}
-
 #main .togglebloc{
 	position: relative;
 } 
@@ -451,13 +445,6 @@ button{
 		width: 20px;
 		height: auto;
 	}
-
-	#main  #contact .btn-ideallab,
-	#main  #contact .btn-idealistinstitute{
-		width: 60px;
-		margin-right: inherit; 
-	}
-
 
 	#main #contact .btn-mail{
 		position: relative;
